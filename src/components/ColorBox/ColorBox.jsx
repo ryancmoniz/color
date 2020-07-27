@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Box from './Box';
+import Box from './styles/Box';
+import CopyContainer from './styles/CopyContainer';
+import BoxContent from './styles/BoxContent';
+import CopyButton from './styles/CopyButton';
+import SeeMore from './styles/SeeMore';
 
 const ColorBox = ({ background, name }) => (
   <Box style={{ background }}>
-    <span>{name}</span>
-    <span>MORE</span>
+    <CopyContainer>
+      <BoxContent>
+        <span>{name}</span>
+      </BoxContent>
+      <CopyButton>Copy</CopyButton>
+    </CopyContainer>
+    <SeeMore>More</SeeMore>
   </Box>
 );
 
