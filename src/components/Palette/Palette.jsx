@@ -18,7 +18,12 @@ const Palette = ({ palette }) => {
 };
 
 Palette.propTypes = {
-  palette: PropTypes.object.isRequired,
+  palette: PropTypes.shape({
+    paletteName: PropTypes.string,
+    id: PropTypes.string,
+    emoji: PropTypes.string,
+    colors: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
 };
 
 export default Palette;
