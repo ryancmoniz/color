@@ -1,22 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ColorBox from './ColorBox';
+import MainContainer from './MainContainer';
+import ColorContainer from './ColorContainer';
+import ColorBox from '../ColorBox/ColorBox';
 
 const Palette = ({ palette }) => {
   const colorBoxes = palette.colors.map((color) => (
     <ColorBox background={color.color} name={color.name} />
   ));
   return (
-    <div className="Palette">
+    <MainContainer>
       {/* TODO: NAVBAR */}
-      <div className="Palette-colors">{colorBoxes}</div>
+      <ColorContainer>{colorBoxes}</ColorContainer>
       {/* TODO: FOOTER */}
-    </div>
+    </MainContainer>
   );
 };
 
 Palette.propTypes = {
-  palette: PropTypes.arrayOf(PropTypes.object).isRequired,
+  palette: PropTypes.object.isRequired,
 };
 
 export default Palette;
