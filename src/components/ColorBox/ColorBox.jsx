@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from './styles/Box';
+import CopyButton from './styles/CopyButton';
 import CopyContainer from './styles/CopyContainer';
 import BoxContent from './styles/BoxContent';
-import CopyButton from './styles/CopyButton';
 import SeeMore from './styles/SeeMore';
 
 const ColorBox = ({ background, name }) => (
